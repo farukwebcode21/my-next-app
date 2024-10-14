@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const PostsPage = async () => {
@@ -14,7 +15,12 @@ const PostsPage = async () => {
           >
             <li className="text-2xl">Title :{post.title}</li>
             <p className="text-xl">{post.body}</p>
-            <button className="btn btn-ghost">Details</button>
+            <Link
+              href={`/posts/${post.id}`}
+              className="btn mt-5 bg-primary text-black"
+            >
+              Details
+            </Link>
           </div>
         ))}
       </ul>
