@@ -1,6 +1,26 @@
+import Link from "next/link";
 import React from "react";
 
 const Navbar = () => {
+  const navLink = (
+    <>
+      <li>
+        <Link href={"/about"}>About</Link>
+      </li>
+      <li>
+        <Link href={"/contact"}>Contact</Link>
+      </li>
+      <li>
+        <Link href={"/news"}>news</Link>
+      </li>
+      <li>
+        <Link href={"/posts"}>posts</Link>
+      </li>
+      <li>
+        <Link href={"/products"}>products</Link>
+      </li>
+    </>
+  );
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -25,49 +45,13 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <a>Parent</a>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
+            {navLink}
           </ul>
         </div>
-        <a className="text-xl btn btn-ghost">daisyUI</a>
+        <a className="text-xl btn btn-ghost ">Next_js</a>
       </div>
       <div className="hidden navbar-center lg:flex">
-        <ul className="px-1 menu menu-horizontal">
-          <li>
-            <a>Item 1</a>
-          </li>
-          <li>
-            <details>
-              <summary>Parent</summary>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </details>
-          </li>
-          <li>
-            <a>Item 3</a>
-          </li>
-        </ul>
+        <ul className="px-1 menu menu-horizontal">{navLink}</ul>
       </div>
       <div className="navbar-end">
         <a className="btn">Button</a>
