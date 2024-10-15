@@ -1,5 +1,10 @@
 import React from "react";
 
+export const metadata = {
+  title: "my-next-app|news",
+  description: "generate news page",
+};
+
 const NewsPage = () => {
   console.log("welcome");
   return (

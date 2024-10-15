@@ -5,6 +5,9 @@ const Navbar = () => {
   const navLink = (
     <>
       <li>
+        <Link href={"/"}>Home</Link>
+      </li>
+      <li>
         <Link href={"/about"}>About</Link>
       </li>
       <li>
