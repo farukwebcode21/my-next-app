@@ -22,7 +22,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="items-center justify-center px-10 py-10 m-0 text-2xl ">
+      <body className="items-center justify-center px-10 py-10 m-0">
         <Navbar />
         {children}
         <Footer />

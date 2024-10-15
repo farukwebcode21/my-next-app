@@ -1,10 +1,11 @@
-module.exports = {
+const nextConfig = {
   images: {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "img.daisyui.com",
+        hostname: "**",
       },
     ],
   },
 };
+export default nextConfig;
